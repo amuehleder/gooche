@@ -36,6 +36,9 @@ namespace gooche
             containerRegistry.RegisterSingleton<ILoginModel ,LoginModel>();
             containerRegistry.RegisterSingleton<IHttpService ,HttpService>();
             containerRegistry.RegisterSingleton<IAccountService, AccountService>();
+            containerRegistry.RegisterForNavigation<BaseTabContainerPage, BaseTabContainerViewModel>();
+            containerRegistry.RegisterForNavigation<ItemsPage, ItemsPageViewModel>();
+            containerRegistry.RegisterForNavigation<AccountPage, AccountPageViewModel>();
         }
     }
 }

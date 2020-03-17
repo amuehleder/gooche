@@ -1,5 +1,6 @@
 ﻿using gooche.Classes;
 using gooche.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,7 +24,7 @@ namespace gooche.Models
             var response = await httpService.PostRequest("Login", loginParams);
             if(response.ResponseState == Classes.Enum.Enums.ServiceResponseState.Success)
             {
-                accountService.StoreLoginUserData((UserData)response.ResponseContent);
+                accountService.StoreLoginUserData(JsonConvert.DeserializeObject<UserData>(response.ResponseContent.ToString()));
                 return true;
             }
             return false;

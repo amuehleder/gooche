@@ -37,7 +37,7 @@ namespace gooche.Services
             response = await httpClient.PostAsync(new Uri(postUri), content);
             if (response.IsSuccessStatusCode)
             {
-                object resultObject = JsonConvert.DeserializeObject<object>(response.Content.ReadAsStringAsync().Result);
+                var resultObject = response.Content.ReadAsStringAsync().Result;
                 return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Success, resultObject);
             }
 

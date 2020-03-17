@@ -11,6 +11,8 @@ namespace gooche.ViewModels
     {
         private ILoginModel loginModel { get; }
 
+        private INavigationService navigationService { get; }
+
         private Command onLoginCommand;
 
         public Command OnLoginCommand
@@ -37,10 +39,15 @@ namespace gooche.ViewModels
             : base(navService)
         {
             Title = "gooche";
+            navigationService = navService;
             loginModel = loginMdl;
-            onLoginCommand = new Command(() =>
+            onLoginCommand = new Command(async () =>
             {
-                loginModel.Login(new LoginParameters(UserName, Password));
+                var IsSuccessful = await loginModel.Login(new LoginParameters(UserName, Password));
+                if(IsSuccessful)
+                {
+                    await navigationService.NavigateAsync("NavigationPage/BaseTabContainerPage", useModalNavigation: true);
+                }
             });
         }
     }
