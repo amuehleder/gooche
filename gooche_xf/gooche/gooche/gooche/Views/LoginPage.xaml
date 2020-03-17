@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="gooche.Views.LoginPage"
+             Title="{Binding Title}">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Username"/>
+        <Entry x:Name="entryUsername" Text="{Binding UserName}"/>
+        <Label Text="Password"/>
+        <Entry IsPassword="True" x:Name="entryPassword" Text="{Binding Password}"/>
+        <Button Text="Login">
+            <Button.Behaviors>
+                <prism:EventToCommandBehavior EventName="Clicked"
+                                              Command="{Binding OnLoginCommand}"/>
+            </Button.Behaviors>
+        </Button>
+    </StackLayout>
+</ContentPage>

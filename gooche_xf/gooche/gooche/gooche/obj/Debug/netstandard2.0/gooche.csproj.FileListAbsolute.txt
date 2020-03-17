@@ -1,0 +1,11 @@
+C:\Projekte\gooche_xf\gooche\gooche\gooche\bin\Debug\netstandard2.0\gooche.deps.json
+C:\Projekte\gooche_xf\gooche\gooche\gooche\bin\Debug\netstandard2.0\gooche.dll
+C:\Projekte\gooche_xf\gooche\gooche\gooche\bin\Debug\netstandard2.0\gooche.pdb
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.csprojAssemblyReference.cache
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.AssemblyInfoInputs.cache
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.AssemblyInfo.cs
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.dll
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.pdb
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\XamlC.stamp

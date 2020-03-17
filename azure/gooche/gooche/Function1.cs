@@ -7,23 +7,23 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using gooche.Classes;
 
 namespace gooche
 {
     public static class Function1
     {
-        [FunctionName("Function1")]
-        public static async Task<IActionResult> Run(
+        [FunctionName("Login")]
+        public static async Task<UserData> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            dynamic data = JsonConvert.DeserializeObject(requestBody);
-
-            return (ActionResult)new OkObjectResult($"Hello");
+            var data = JsonConvert.DeserializeObject<UserData>(requestBody);
+            
+            return new UserData(data.UserName);
         }
     }
 }
