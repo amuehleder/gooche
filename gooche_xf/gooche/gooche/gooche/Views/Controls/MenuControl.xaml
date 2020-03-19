@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="root"
+             x:Class="gooche.Views.Controls.MenuControl">
+    <Grid Margin="10, 5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Text="{Binding MenuName, Source={x:Reference root}}"  Style="{StaticResource lblTitle}" Grid.Row="0"/>
+        <Label Text="{Binding User.UserName, Source={x:Reference root}}" Grid.Row="1"/>
+        <Label Text="{Binding From, StringFormat='{0:dd MMMM yyyy}', Source={x:Reference root}}" Grid.Row="2"/>
+        <Label Text="{Binding To, StringFormat='{0:dd MMMM yyyy}', Source={x:Reference root}}" Grid.Row="3"/>
+    </Grid>
+</ViewCell>

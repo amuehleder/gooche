@@ -16,7 +16,7 @@ namespace gooche.Views {
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\BaseTabContainerPage.xaml")]
     public partial class BaseTabContainerPage : global::Xamarin.Forms.TabbedPage {
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(BaseTabContainerPage));
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace gooche.Classes
 {
@@ -8,9 +9,15 @@ namespace gooche.Classes
     {
         public string UserName { get; }
 
-        public UserData(string userName)
+        public DateTime BirthDate { get; }
+
+        public int Rating { get; }
+
+        public UserData(string userName, DateTime birthDate, int rating)
         {
             UserName = userName;
+            BirthDate = birthDate;
+            Rating = rating;
         }
     }
 }

@@ -21,9 +21,20 @@ namespace gooche.Services
             baseUri = "http://10.0.2.2:7071/api/";
         }
 
-        public Task<ServiceResponse> GetRequest(string uri)
+        public async Task<ServiceResponse> GetRequest(string uri)
         {
-            throw new NotImplementedException();
+            var getUri = baseUri.ToString() + uri;
+
+            HttpResponseMessage response = null;
+
+            response = await httpClient.GetAsync(getUri);
+            if (response.IsSuccessStatusCode)
+            {
+                var resultObject = response.Content.ReadAsStringAsync().Result;
+                return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Success, resultObject);
+            }
+
+            return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Failure);
         }
 
         public async Task<ServiceResponse> PostRequest(string uri, object obj)

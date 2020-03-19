@@ -2,7 +2,7 @@ package md51558244f76c53b6aeda52c8a337f2c37;
 
 
 public class CarouselViewRenderer
-	extends md51558244f76c53b6aeda52c8a337f2c37.ItemsViewRenderer
+	extends md51558244f76c53b6aeda52c8a337f2c37.ItemsViewRenderer_3
 	implements
 		mono.android.IGCUserPeer
 {
@@ -10,6 +10,7 @@ public class CarouselViewRenderer
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onInterceptTouchEvent:(Landroid/view/MotionEvent;)Z:GetOnInterceptTouchEvent_Landroid_view_MotionEvent_Handler\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.Forms.Platform.Android.CarouselViewRenderer, Xamarin.Forms.Platform.Android", CarouselViewRenderer.class, __md_methods);
 	}
@@ -37,6 +38,14 @@ public class CarouselViewRenderer
 		if (getClass () == CarouselViewRenderer.class)
 			mono.android.TypeManager.Activate ("Xamarin.Forms.Platform.Android.CarouselViewRenderer, Xamarin.Forms.Platform.Android", "Android.Content.Context, Mono.Android:Android.Util.IAttributeSet, Mono.Android:System.Int32, mscorlib", this, new java.lang.Object[] { p0, p1, p2 });
 	}
+
+
+	public boolean onInterceptTouchEvent (android.view.MotionEvent p0)
+	{
+		return n_onInterceptTouchEvent (p0);
+	}
+
+	private native boolean n_onInterceptTouchEvent (android.view.MotionEvent p0);
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
