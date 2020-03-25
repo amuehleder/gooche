@@ -15,7 +15,7 @@ namespace gooche.Functions
     public static class ItemFunctions
     {
         [FunctionName("GetMenus")]
-        public static async Task<List<Menu>> Run(
+        public static async Task<List<Menu>> GetMenus(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
@@ -24,7 +24,7 @@ namespace gooche.Functions
 
             for(int i = 0; i < 5; i++)
             {
-                returnList.Add(new Menu(new UserData("testuser", DateTime.Now, 3), "testmenu", DateTime.Now, DateTime.Now));
+                returnList.Add(new Menu(new UserData("testuser", DateTime.Now, 3), "testmenu", DateTime.Now, DateTime.Now, 5, 5, 5));
             }
 
             return returnList;

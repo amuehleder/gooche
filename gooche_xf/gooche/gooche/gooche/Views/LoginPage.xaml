@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com"
+             xmlns:controls="clr-namespace:gooche.Views.Controls"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="gooche.Views.LoginPage"
              Title="{Binding Title}">
@@ -16,5 +17,6 @@
                                               Command="{Binding OnLoginCommand}"/>
             </Button.Behaviors>
         </Button>
+        <controls:ClickableLabel TextColor="Blue" Text="No Account yet? Register now." TappedCommand="{Binding OnRegisterCommand}"/>
     </StackLayout>
 </ContentPage>

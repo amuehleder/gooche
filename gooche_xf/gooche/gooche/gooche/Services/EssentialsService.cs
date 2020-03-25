@@ -19,8 +19,6 @@ namespace gooche.Services
                 status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
             }
 
-            // Additionally could prompt the user to turn on in settings
-
             return status;
         }
 

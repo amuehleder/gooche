@@ -6,14 +6,17 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="gooche.Views.ItemsPage"
              Title="{Binding Title}">
-    <ListView ItemsSource="{Binding MenuList}" HasUnevenRows="True">
+    <controls:GoocheListview ItemsSource="{Binding MenuList}">
         <ListView.ItemTemplate>
             <DataTemplate>
-                    <controls:MenuControl User="{Binding User}"
+                <controls:MenuControl User="{Binding User}"
                                       MenuName="{Binding MenuName}"
                                       From="{Binding From}"
-                                      To="{Binding To}"/>
+                                      To="{Binding To}"
+                                      Price="{Binding Price}"
+                                      IsVegan="{Binding IsVegan}"
+                                      IsVegetarian="{Binding IsVegetarian}"/>
             </DataTemplate>
         </ListView.ItemTemplate>
-    </ListView>
+    </controls:GoocheListview>
 </ContentPage>

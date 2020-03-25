@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="gooche.Views.Controls.LabelEntryControl"
+             x:Name="root">
+    <Label Text="{Binding Name, Source={x:Reference root}}" />
+    <Entry Text="{Binding Input, Source={x:Reference root}}" IsPassword="{Binding IsPassword, Source={x:Reference root}}" Keyboard="{Binding KeyboardType, Source={x:Reference root}}" />
+</StackLayout>

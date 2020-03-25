@@ -21,6 +21,14 @@ namespace gooche.ViewModels
             set => SetProperty(ref onLoginCommand, value);
         }
 
+        private Command onRegisterCommand;
+
+        public Command OnRegisterCommand
+        {
+            get => onRegisterCommand;
+            set => SetProperty(ref onRegisterCommand, value);
+        }
+
         private string userName;
         public string UserName
         {
@@ -44,10 +52,15 @@ namespace gooche.ViewModels
             onLoginCommand = new Command(async () =>
             {
                 var IsSuccessful = await loginModel.Login(new LoginParameters(UserName, Password));
-                if(IsSuccessful)
+                if (IsSuccessful)
                 {
                     await navigationService.NavigateAsync("NavigationPage/BaseTabContainerPage", useModalNavigation: true);
                 }
+            });
+
+            onRegisterCommand = new Command(async () =>
+            {
+                await navigationService.NavigateAsync("RegisterPage", useModalNavigation: true);
             });
         }
     }

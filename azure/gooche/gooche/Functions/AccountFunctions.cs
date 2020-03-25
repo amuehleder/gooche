@@ -14,7 +14,7 @@ namespace gooche.Functions
     public static class AccountFunctions
     {
         [FunctionName("Login")]
-        public static async Task<UserData> Run(
+        public static async Task<UserData> Login(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
         {
@@ -24,6 +24,19 @@ namespace gooche.Functions
             var data = JsonConvert.DeserializeObject<UserData>(requestBody);
             
             return new UserData(data.UserName, DateTime.Now, 3);
+        }
+
+        [FunctionName("Register")]
+        public static async Task<bool> Register(
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
+            ILogger log)
+        {
+            log.LogInformation("C# HTTP trigger function processed a request.");
+
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            var data = JsonConvert.DeserializeObject<RegisterParameters>(requestBody);
+
+            return true;
         }
     }
 }

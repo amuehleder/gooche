@@ -6,16 +6,40 @@
              mc:Ignorable="d"
              x:Name="root"
              x:Class="gooche.Views.Controls.MenuControl">
-    <Grid Margin="10, 5">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Label Text="{Binding MenuName, Source={x:Reference root}}"  Style="{StaticResource lblTitle}" Grid.Row="0"/>
-        <Label Text="{Binding User.UserName, Source={x:Reference root}}" Grid.Row="1"/>
-        <Label Text="{Binding From, StringFormat='{0:dd MMMM yyyy}', Source={x:Reference root}}" Grid.Row="2"/>
-        <Label Text="{Binding To, StringFormat='{0:dd MMMM yyyy}', Source={x:Reference root}}" Grid.Row="3"/>
-    </Grid>
+    <!--<StackLayout Margin="10, 5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Label Text="{Binding DateFromTo, Source={x:Reference root}}" TextColor="LightGray"/>
+        <Label Text="{Binding MenuName, Source={x:Reference root}}" FontSize="24" FontFamily="Bold"/>
+        --><!--<Label Text="{Binding MenuName, Source={x:Reference root}}"  Style="{StaticResource lblTitle}" Grid.Row="0"/>--><!--
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="{Binding User.UserName, Source={x:Reference root}}" Grid.Column="0"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Grid.Column="1">
+                <Label Text="Rating:"/>
+                <Label Text="{Binding User.Rating, Source={x:Reference root}}"/>
+            </StackLayout>
+        </Grid>
+        <Label Text="{Binding FormattedPrice, Source={x:Reference root}}" FontSize="24" FontFamily="Bold"/>
+    </StackLayout>-->
+    <StackLayout Margin="10, 5" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Label Text="23.07.2020 12:04" TextColor="LightGray"/>
+        <Label Text="Schnitzel" FontSize="24" FontFamily="Bold"/>
+        <!--<Label Text="{Binding MenuName, Source={x:Reference root}}"  Style="{StaticResource lblTitle}" Grid.Row="0"/>-->
+        <Grid VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="TestUser" Grid.Column="0"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Grid.Column="1">
+                <Label Text="Rating:"/>
+                <Label Text="4"/>
+            </StackLayout>
+        </Grid>
+        <Label Text="3 €" FontSize="24" FontFamily="Bold"/>
+        <Label Text="vegan" IsVisible="True" TextColor="Green"/>
+        <Label Text="vegetarian" IsVisible="False" TextColor="Green"/>
+    </StackLayout>
 </ViewCell>

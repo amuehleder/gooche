@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:prism="http://prismlibrary.com"
+             xmlns:controls="clr-namespace:gooche.Views.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+                x:Class="gooche.Views.RegisterPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <controls:LabelEntryControl Name="Username:" Input="{Binding UserName, Mode=TwoWay}"/>
+            <controls:LabelEntryControl Name="Email:" Input="{Binding Email, Mode=TwoWay}" KeyboardType="Email"/>
+            <Label Text="BirthDate"/>
+            <DatePicker Date="{Binding BirthDate}"/>
+            <controls:LabelEntryControl Name="Password:" Input="{Binding Password, Mode=TwoWay}" IsPassword="True"/>
+            <Button Text="Register" HorizontalOptions="Center">
+                <Button.Behaviors>
+                    <prism:EventToCommandBehavior EventName="Clicked"
+                                              Command="{Binding OnRegisterCommand}"/>
+                </Button.Behaviors>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

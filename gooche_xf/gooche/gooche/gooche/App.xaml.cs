@@ -26,7 +26,7 @@ namespace gooche
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("BaseTabContainerPage");
+            await NavigationService.NavigateAsync("LoginPage");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -38,9 +38,11 @@ namespace gooche
             containerRegistry.RegisterSingleton<IAccountService, AccountService>();
             containerRegistry.RegisterForNavigation<BaseTabContainerPage, BaseTabContainerViewModel>();
             containerRegistry.RegisterForNavigation<ItemsPage, ItemsViewModel>();
-            containerRegistry.RegisterForNavigation<AccountPage, AccountPageViewModel>();
+            containerRegistry.RegisterForNavigation<AccountPage, AccountViewModel>();
             containerRegistry.RegisterSingleton<IItemsModel, ItemsModel>();
             containerRegistry.RegisterSingleton<IEssentialsService, EssentialsService>();
+            containerRegistry.RegisterForNavigation<RegisterPage, RegisterViewModel>();
+            containerRegistry.RegisterSingleton<IRegisterModel, RegisterModel>();
 
         }
     }
