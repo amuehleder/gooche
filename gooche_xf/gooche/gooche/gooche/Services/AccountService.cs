@@ -26,7 +26,12 @@ namespace gooche.Services
             {
                 return userData;
             }
-                return null;
+            return null;
+        }
+
+        public bool GetUserLoggedIn()
+        {
+            return isLoggedIn;
         }
 
         public void SetCurrentUserPosition(Location currentLocation)

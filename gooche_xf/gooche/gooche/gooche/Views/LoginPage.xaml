@@ -17,6 +17,7 @@
                                               Command="{Binding OnLoginCommand}"/>
             </Button.Behaviors>
         </Button>
+        <Label Text="Login failed. Please try again." TextColor="Red" IsVisible="{Binding IsLoginFailedVisible}"/>
         <controls:ClickableLabel TextColor="Blue" Text="No Account yet? Register now." TappedCommand="{Binding OnRegisterCommand}"/>
     </StackLayout>
 </ContentPage>

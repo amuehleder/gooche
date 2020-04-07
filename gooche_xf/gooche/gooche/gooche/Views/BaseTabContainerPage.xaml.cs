@@ -8,6 +8,7 @@ namespace gooche.Views
         {
             InitializeComponent();
             Children.Add(new ItemsPage());
+            Children.Add(new CreateMenuPage());
             Children.Add(new AccountPage());
         }
     }

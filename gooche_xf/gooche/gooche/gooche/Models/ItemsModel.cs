@@ -26,5 +26,15 @@ namespace gooche.Models
             }
             return null;
         }
+
+        public async Task<bool> CreateMenu(Menu menu)
+        {
+            var response = await httpService.PostRequest("CreateMenu", menu);
+            if (response.ResponseState == Classes.Enum.Enums.ServiceResponseState.Success)
+            {
+                return JsonConvert.DeserializeObject<bool>(response.ResponseContent.ToString());
+            }
+            return false;
+        }
     }
 }

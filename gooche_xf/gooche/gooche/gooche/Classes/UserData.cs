@@ -5,19 +5,26 @@ using Xamarin.Essentials;
 
 namespace gooche.Classes
 {
-    public class UserData
+    public class UserData : LoginParameters
     {
-        public string UserName { get; }
+        public int UserID { get; }
 
         public DateTime BirthDate { get; }
 
+        public string Email { get; }
+
         public int Rating { get; }
 
-        public UserData(string userName, DateTime birthDate, int rating)
+        public UserData(string username, DateTime birthDate, string email, string password = null)
+            : base(username, password)
         {
-            UserName = userName;
             BirthDate = birthDate;
-            Rating = rating;
+            Email = email;
+        }
+
+        public UserData(int userId)
+        {
+            UserID = userId;
         }
     }
 }

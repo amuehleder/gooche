@@ -15,6 +15,9 @@
     <Compile Update="Views\BaseTabContainerPage.xaml.cs">
       <DependentUpon>BaseTabContainerPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Controls\LabelDateTimeControl.xaml.cs">
+      <DependentUpon>LabelDateTimeControl.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -31,6 +34,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Controls\MenuControl.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CreateMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ItemsPage.xaml">

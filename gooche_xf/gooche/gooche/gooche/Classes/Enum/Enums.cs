@@ -9,6 +9,9 @@ namespace gooche.Classes.Enum
         public enum ServiceResponseState
         {
             Success,
+            LoginFailed,
+            UsernameTaken,
+            AlreadyRegistered,
             Failure
         } 
     }

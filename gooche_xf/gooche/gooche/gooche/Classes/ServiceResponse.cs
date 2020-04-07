@@ -10,10 +10,10 @@ namespace gooche.Classes
         public ServiceResponseState ResponseState { get; }
         public object ResponseContent { get; }
 
-        public ServiceResponse(ServiceResponseState responseState, object content = null)
+        public ServiceResponse(ServiceResponseState responseState, object responsecontent = null)
         {
             ResponseState = responseState;
-            ResponseContent = content;
+            ResponseContent = responsecontent;
         }
     }
 }

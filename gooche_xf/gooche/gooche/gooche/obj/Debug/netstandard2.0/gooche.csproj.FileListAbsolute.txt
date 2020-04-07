@@ -15,3 +15,5 @@ C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.pdb
 C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\gooche.csprojAssemblyReference.cache
 C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\Views\Controls\LabelEntryControl.xaml.g.cs
 C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\Views\Controls\LabelDateTimeControl.xaml.g.cs
+C:\Projekte\gooche_xf\gooche\gooche\gooche\obj\Debug\netstandard2.0\Views\CreateMenuPage.xaml.g.cs

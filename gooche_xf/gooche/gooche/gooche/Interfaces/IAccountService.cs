@@ -12,6 +12,8 @@ namespace gooche.Interfaces
 
         UserData GetUserData();
 
+        bool GetUserLoggedIn();
+
         Location GetCurrentUserPosition();
 
         void SetCurrentUserPosition(Location currentLocation);

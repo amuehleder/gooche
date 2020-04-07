@@ -14,5 +14,7 @@ namespace gooche.Classes
             Username = username;
             Password = password;
         }
+
+        public LoginParameters() { }
     }
 }

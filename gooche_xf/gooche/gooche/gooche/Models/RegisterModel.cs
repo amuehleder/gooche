@@ -19,9 +19,9 @@ namespace gooche.Models
             accountService = accountSvc;
         }
 
-        public async Task<bool> Register(RegisterParameters registerParams)
+        public async Task<bool> Register(UserData userData)
         {
-            var response = await httpService.PostRequest("Register", registerParams);
+            var response = await httpService.PostRequest("Register", userData);
             if (response.ResponseState == Classes.Enum.Enums.ServiceResponseState.Success)
             {
                 return JsonConvert.DeserializeObject<bool>(response.ResponseContent.ToString());

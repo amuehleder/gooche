@@ -31,7 +31,7 @@ namespace gooche.Services
             if (response.IsSuccessStatusCode)
             {
                 var resultObject = response.Content.ReadAsStringAsync().Result;
-                return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Success, resultObject);
+                return JsonConvert.DeserializeObject<ServiceResponse>(response.Content.ReadAsStringAsync().Result);
             }
 
             return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Failure);
@@ -49,7 +49,7 @@ namespace gooche.Services
             if (response.IsSuccessStatusCode)
             {
                 var resultObject = response.Content.ReadAsStringAsync().Result;
-                return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Success, resultObject);
+                return JsonConvert.DeserializeObject<ServiceResponse>(response.Content.ReadAsStringAsync().Result);
             }
 
             return new ServiceResponse(Classes.Enum.Enums.ServiceResponseState.Failure);

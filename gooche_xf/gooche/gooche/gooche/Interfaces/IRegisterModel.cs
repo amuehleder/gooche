@@ -8,6 +8,6 @@ namespace gooche.Interfaces
 {
     public interface IRegisterModel
     {
-        Task<bool> Register(RegisterParameters loginParams);
+        Task<bool> Register(UserData userData);
     }
 }

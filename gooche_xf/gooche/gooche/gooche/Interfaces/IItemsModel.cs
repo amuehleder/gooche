@@ -9,5 +9,7 @@ namespace gooche.Interfaces
     public interface IItemsModel
     {
         Task<List<Menu>> GetMenus();
+
+        Task<bool> CreateMenu(Menu menu);
     }
 }

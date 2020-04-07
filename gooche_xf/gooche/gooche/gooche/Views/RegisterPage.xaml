@@ -4,14 +4,15 @@
                 xmlns:prism="http://prismlibrary.com"
              xmlns:controls="clr-namespace:gooche.Views.Controls"
              prism:ViewModelLocator.AutowireViewModel="True"
-                x:Class="gooche.Views.RegisterPage">
+             x:Class="gooche.Views.RegisterPage"
+             Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <controls:LabelEntryControl Name="Username:" Input="{Binding UserName, Mode=TwoWay}"/>
-            <controls:LabelEntryControl Name="Email:" Input="{Binding Email, Mode=TwoWay}" KeyboardType="Email"/>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="20, 0">
+            <controls:LabelEntryControl Name="Username:" HorizontalOptions="FillAndExpand" Input="{Binding UserName, Mode=TwoWay}"/>
+            <controls:LabelEntryControl Name="Email:" HorizontalOptions="FillAndExpand" Input="{Binding Email, Mode=TwoWay}" KeyboardType="Email"/>
             <Label Text="BirthDate"/>
             <DatePicker Date="{Binding BirthDate}"/>
-            <controls:LabelEntryControl Name="Password:" Input="{Binding Password, Mode=TwoWay}" IsPassword="True"/>
+            <controls:LabelEntryControl Name="Password:" HorizontalOptions="FillAndExpand" Input="{Binding Password, Mode=TwoWay}" IsPassword="True"/>
             <Button Text="Register" HorizontalOptions="Center">
                 <Button.Behaviors>
                     <prism:EventToCommandBehavior EventName="Clicked"

@@ -43,6 +43,14 @@ namespace gooche.ViewModels
             set => SetProperty(ref password, value);
         }
 
+        private bool isLoginFailedVisible;
+
+        public bool IsLoginFailedVisible
+        {
+            get => isLoginFailedVisible;
+            set => SetProperty(ref isLoginFailedVisible, value);
+        }
+
         public LoginViewModel(INavigationService navService, ILoginModel loginMdl)
             : base(navService)
         {
@@ -54,13 +62,17 @@ namespace gooche.ViewModels
                 var IsSuccessful = await loginModel.Login(new LoginParameters(UserName, Password));
                 if (IsSuccessful)
                 {
-                    await navigationService.NavigateAsync("NavigationPage/BaseTabContainerPage", useModalNavigation: true);
+                    await navigationService.NavigateAsync("BaseTabContainerPage");
                 }
+                else
+                {
+                    IsLoginFailedVisible = true;
+                };
             });
 
             onRegisterCommand = new Command(async () =>
             {
-                await navigationService.NavigateAsync("RegisterPage", useModalNavigation: true);
+                await navigationService.NavigateAsync("RegisterPage", useModalNavigation: false);
             });
         }
     }

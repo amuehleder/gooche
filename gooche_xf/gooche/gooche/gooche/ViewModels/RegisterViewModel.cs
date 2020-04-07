@@ -60,9 +60,16 @@ namespace gooche.ViewModels
             Title = "Register";
             registerModel = registerMdl;
             birthDate = DateTime.Now;
-            onRegisterCommand = new Command(async () => {
-                await registerModel.Register(new RegisterParameters(userName, birthDate, password, email));
+            onRegisterCommand = new Command(async () =>
+            {
+                if (userName != null && birthDate != null && email != null && password != null)
+                {
+                    if(await registerModel.Register(new UserData(userName, birthDate, email, password)))
+                    {
+                        await navigationService.GoBackAsync();
+                    }
+                }
             });
         }
-}
+    }
 }

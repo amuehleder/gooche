@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:controls="clr-namespace:gooche.Views.Controls"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="gooche.Views.CreateMenuPage"
+             Title="{Binding Title}">
+    <StackLayout>
+        <controls:LabelEntryControl Name="Gericht" Input="{Binding MenuName}"/>
+        <controls:LabelDateTimeControl Name="From" DateTime="{Binding From}"/>
+        <controls:LabelDateTimeControl Name="From" DateTime="{Binding To}"/>
+        <controls:LabelEntryControl Name="Preis in €" Input="{Binding Price}" KeyboardType="Numeric"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Vegetarian"/>
+            <CheckBox IsChecked="{Binding IsVegetarian}"/>
+            <Label Text="Vegan"/>
+            <CheckBox IsChecked="{Binding IsVegan}"/>
+        </StackLayout>
+        <Button Text="Create Menu">
+            <Button.Behaviors>
+                <prism:EventToCommandBehavior EventName="Clicked"
+                                              Command="{Binding OnCreateMenuCommand}"/>
+            </Button.Behaviors>
+        </Button>
+    </StackLayout>
+</ContentPage>

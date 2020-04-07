@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "gooche_db", "gooche_db\gooche_db.sqlproj", "{E1606D36-041E-4E4A-8AD4-5D54726BD18D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1606D36-041E-4E4A-8AD4-5D54726BD18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1606D36-041E-4E4A-8AD4-5D54726BD18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1606D36-041E-4E4A-8AD4-5D54726BD18D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E1606D36-041E-4E4A-8AD4-5D54726BD18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1606D36-041E-4E4A-8AD4-5D54726BD18D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1606D36-041E-4E4A-8AD4-5D54726BD18D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BD320B0-13C2-40D6-98D3-D900B2BE1432}
+	EndGlobalSection
+EndGlobal
